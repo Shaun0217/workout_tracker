@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm approve-scripts *)",
+      "Bash(npm rebuild *)",
+      "Bash(node -e \"require\\('esbuild'\\)\")"
+    ]
+  }
+}
