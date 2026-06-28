@@ -13,3 +13,6 @@ dist-ssr
 .idea
 *.log
 npm-debug.log*
+
+# TypeScript build info
+*.tsbuildinfo

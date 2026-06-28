@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LineChart, Line, ResponsiveContainer, YAxis } from 'recharts'
-import { useAuth } from '../auth/AuthContext'
 import { useAsync } from '../lib/useAsync'
 import {
   getActiveWorkout,
@@ -24,7 +23,6 @@ const templateColors: Record<string, string> = {
 
 export default function Home() {
   const navigate = useNavigate()
-  const { signOut } = useAuth()
   const [starting, setStarting] = useState<string | null>(null)
 
   const state = useAsync(
@@ -67,17 +65,9 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <header className="safe-top flex items-center justify-between px-4 pb-4">
-        <div>
-          <h1 className="text-2xl font-bold text-white">Lift</h1>
-          <p className="text-sm text-slate-400">What are we beating today?</p>
-        </div>
-        <button
-          onClick={signOut}
-          className="rounded-lg px-3 py-1.5 text-sm text-slate-400 ring-1 ring-slate-700 active:bg-slate-800"
-        >
-          Sign out
-        </button>
+      <header className="safe-top px-4 pb-4">
+        <h1 className="text-2xl font-bold text-white">Lift</h1>
+        <p className="text-sm text-slate-400">What are we beating today?</p>
       </header>
 
       {active && (
