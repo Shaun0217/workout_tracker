@@ -79,3 +79,4 @@ npm run typecheck  # types only
 Rest timer · plate calculator · RPE/notes per set · multiple programs · CSV export ·
 deload/auto-progression. The schema leaves room for all of these.
 # workout_tracker
+# workout_tracker
